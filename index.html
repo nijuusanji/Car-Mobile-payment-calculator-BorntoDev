@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+    <title>คำนวณค่างวด</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Pacifico" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header" id="C">
+        <h2>โปรแกรมคำนวณค่างวดรถยนต์และมอเตอร์ไซค์</h2>
+    </div>
+
+    <div class="change icon">
+        <a href="#M">คำนวณผ่อนมือถือ</a>
+    </div>
+
+    <div class="content">
+        <div class="cal container">
+            <div class="input price">
+                <h3 class="in">ราคาของตัวรถ(บาท)</h3>
+                <input type="text" id="inprice">
+            </div>
+            <div class="input downpayment">
+                <h3 class="in">เงินดาวน์(%)</h3>
+                <select name="donw" id="indown">
+            <option value="0">0%</option>
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+            <option value="30">30%</option>
+            <option value="35">35%</option>
+            <option value="40">40%</option>
+        </select>
+            </div>
+
+            <div class="input month">
+                <h3 class="in">ระยะเวลาผ่อน(เดือน)</h3>
+                <select name="month1" id="inmonth">
+                <option value="12">12เดือน</option>
+                <option value="24">24เดือน</option>
+                <option value="36">36เดือน</option>
+                <option value="48">48เดือน</option>
+                <option value="60">60เดือน</option>
+                <option value="72">72เดือน</option>
+                <option value="84">84เดือน</option>
+            </select>
+            </div>
+            <div class="input increase">
+                <h3 class="in">ดอกเบี้ย ต่อปี(%)</h3>
+                <input type="text" id="increase">
+            </div>
+            <button id="btn" onClick="calcu()" class="btn">คำนวณ</button>
+        </div>
+
+        <div class="result container">
+            <div class="downpay">
+                <h3>เงินดาวน์ที่ต้องจ่าย</h3>
+                <div id="show down" class="show">0</div>
+            </div>
+            <div class="monthpay">
+                <h3>ยอดผ่อนต่อเดือน(บาท)</h3>
+                <div id="show monthpay" class="show">0</div>
+            </div>
+            <div class="sumfinancial">
+                <h3>ยอดจัดไฟแนนซ์(บาท)</h3>
+                <div id="show sum" class="show">0</div>
+            </div>
+            <div class="sumincrease">
+                <h3>ยอดรวมดอกเบี้ย</h3>
+                <div id="show increase" class="show">0</div>
+            </div>
+            <div class="sumall">
+                <h3>ยอดรวมทั้งหมด</h3>
+                <div id="show allpay" class="show">0</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="header M" id="M">
+        <h2>โปรแกรมคำนวณค่างวดมือถือแท็บเล็ต</h2>
+    </div>
+
+    <div class="change icon">
+        <a href="#C">คำนวณผ่อนรถ</a>
+    </div>
+
+    <div class="content2">
+        <div class="cal container">
+            <div class="input price">
+                <h3 class="in">ราคาเครื่อง</h3>
+                <input type="text" id="inprice2">
+            </div>
+
+            <div class="input month">
+                <h3 class="in">ระยะเวลาผ่อน(เดือน)</h3>
+                <select name="month1" id="inmonth2">
+                <option value="0">ซื้อสด</option>
+                <option value="3">3เดือน</option>
+                <option value="6">6เดือน</option>
+                <option value="10">10เดือน</option>
+                <option value="12">12เดือน</option>
+                <option value="18">18เดือน</option>
+                <option value="20">20เดือน</option>
+                <option value="24">24เดือน</option>
+                <option value="30">30เดือน</option>
+                <option value="36">36เดือน</option>
+            </select>
+            </div>
+            <div class="input increase">
+                <h3 class="in">ดอกเบี้ย ต่อเดือน(%)</h3>
+                <input type="text" id="increase2" value="0">
+            </div>
+
+            <div class="input paydayone">
+                <h3 class="in">จ่ายล่วงหน้า</h3>
+                <input type="text" id="prepay" value="0">
+            </div>
+
+            <div class="input tidpro">
+                <h3 class="in">ราคาโปรค่ายมือถือ</h3>
+                <input type="text" id="intidpro" value="0">
+            </div>
+
+            <div class="input tidproMonth">
+                <h3 class="in">ระยะเวลาติดโปร</h3>
+                <input type="text" id="intidproMonth" value="0">
+            </div>
+            <button id="btn" onClick="calcu2()" class="btn">คำนวณ</button>
+        </div>
+
+        <div class="result container">
+            <div class="monthpay">
+                <h3>ยอดผ่อนต่อเดือน(บาท)</h3>
+                <div id="show monthpay2" class="show">0</div>
+            </div>
+            <div class="monthpay">
+                <h3>ดอกเบี้ยทั้งหมด(บาท)</h3>
+                <div id="show increse2" class="show">0</div>
+            </div>
+            <div class="monthpayafter2">
+                <h3 id="MNP">ยอดผ่อนรวมค่าเน็ตต่อเดือน(บาท)</h3>
+                <div id="show sum2" class="show">0</div>
+            </div>
+            <div class="sumpro2">
+                <h3>ยอดรวมค่าโปรซิมมือถือ</h3>
+                <div id="show sumpro2" class="show">0</div>
+            </div>
+            <div class="sumall">
+                <h3>ยอดรวมทั้งหมด</h3>
+                <div id="show allpay2" class="show">0</div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+
+    </div>
+</body>
+
+</html>

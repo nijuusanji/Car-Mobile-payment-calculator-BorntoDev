@@ -1,0 +1,14 @@
+{
+    "folders": [
+		{
+			"path": "../../../../Applications/XAMPP/xamppfiles/htdocs/ToDoWeb"
+		},
+		{
+			"path": "."
+		}
+	],
+    "settings": {
+        "liveServer.settings.port": 5501,
+        "liveServer.settings.multiRootWorkspaceName": "Btd_Certify_CarPayment"
+    }
+}

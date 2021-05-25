@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(175, 251, 143, 1) 0%, rgba(216, 212, 212, 1) 90%);
+}
+
+.header.M {
+    margin-top: 100px;
+    margin-bottom: auto;
+}
+
+.change.icon {
+    text-align: right;
+    margin: 15px;
+}
+
+.content {
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.content2 {
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
+    width: 100%;
+    padding: 12px 10px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select {
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
+    width: 100%;
+    padding: 12px 10px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: greenyellow;
+}
+
+.btn:hover {
+    background-color: rgb(119, 170, 42);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cal {
+    padding: 20px 20px;
+}
+
+.result {
+    padding: 20px 20px;
+}
+
+h2 {
+    padding: 30px;
+}
+
+.show {
+    font-size: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
